@@ -1,0 +1,19 @@
+.forfait {
+    background-color: seashell;
+    margin-top : 10px;
+}
+
+ul.forfaits {
+    list-style-type: none;
+}
+
+#detail_produit {
+    display : none;
+    background: white;
+    border-radius: 10px;
+    margin: 100px auto;
+    position: relative;
+    width: 500px;
+    padding: 40px;
+}
+
