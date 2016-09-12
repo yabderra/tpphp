@@ -53,12 +53,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forfaits.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forfaits.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/forfaits.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reservation.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reservation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1473685576533" expanded="true" signature="146:3290" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="168:500" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="192:272" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="295:488" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="524:3290" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="616:3277" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="635:788" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="806:969" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="987:1156" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="1174:1366" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="1384:1711" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="1729:2180" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="1857:2160" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="2198:2723" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="2372:2703" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="2741:2931" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="2949:3167" ph="..." />
+                <marker date="1473685576533" expanded="true" signature="3185:3261" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -247,7 +276,7 @@
       <workItem from="1473169275656" duration="3171000" />
       <workItem from="1473681131160" duration="4189000" />
       <workItem from="1473685362043" duration="1988000" />
-      <workItem from="1473687573688" duration="899000" />
+      <workItem from="1473687573688" duration="924000" />
     </task>
     <task id="LOCAL-00001" summary="page acceuil">
       <created>1473689875267</created>
@@ -277,11 +306,18 @@
       <option name="project" value="LOCAL" />
       <updated>1473689932701</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="page forfaits">
+      <created>1473689957737</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1473689957737</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11232000" />
+    <option name="totallyTimeSpent" value="11257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1608" height="864" extended-state="6" />
@@ -320,7 +356,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="page acceuil" />
     <MESSAGE value="page catalog" />
-    <option name="LAST_COMMIT_MESSAGE" value="page catalog" />
+    <MESSAGE value="page forfaits" />
+    <option name="LAST_COMMIT_MESSAGE" value="page forfaits" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -395,7 +432,6 @@
     <entry file="file://$PROJECT_DIR$/catalogue.php" />
     <entry file="file://$PROJECT_DIR$/contact.php" />
     <entry file="file://$PROJECT_DIR$/views/menu.php" />
-    <entry file="file://$PROJECT_DIR$/reservation.php" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
@@ -425,6 +461,33 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reservation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1473685576533" expanded="true" signature="146:3290" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="168:500" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="192:272" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="295:488" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="524:3290" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="616:3277" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="635:788" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="806:969" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="987:1156" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="1174:1366" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="1384:1711" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="1729:2180" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="1857:2160" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="2198:2723" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="2372:2703" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="2741:2931" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="2949:3167" ph="..." />
+            <marker date="1473685576533" expanded="true" signature="3185:3261" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
