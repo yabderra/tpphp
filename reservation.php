@@ -2,7 +2,13 @@
 require_once('views/page_top.php');// Inclusion des defines
 ?>
     <main>
-        <h1>Accueil</h1>
+
+
+
+
+
+
+        <h1><br>Accueil</br></h1>
     </main>
 <?php
 
@@ -11,17 +17,12 @@ echo'<div id="wrapper">
         <div id="logo">
             <img src="images/logo.jpg" alt="logo agence voyage">
         </div>
-        <ul id="menu">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="catalogue.html">Catalogue</a></li>
-            <li><a href="reservation.html">Réservation</a></li>
-
-        </ul>
+      
 
     </div>
 
     <div id="contenu">
-
+<br><br><br><br>
         <form method="post " action="#" name="myform" id="myform" onsubmit="validation()">
 
             <div>
@@ -59,15 +60,9 @@ echo'<div id="wrapper">
 
             </div>
             <div>
-                <label class="labels" for="sports">Choisir Un Forfait:</label>
-                <select class="inputs" name="sports" id="sports" multiple="multiple" size="5">
-                    <option value="foot">Forfait_1</option>
-                    <option value="tennis">Forfait_2</option>
-                    <option value="danse">Forfait_3</option>
-                    <option value="yoga">Forfait_4</option>
-                    <option value="canape">Forfait_5</option>
-                </select>
-
+                <label class="labels" for="sports">Forfait choisi :</label>
+             
+                
             </div>
             <div>
                 <label class="labels" for="commentaire">Commentaire:</label>
