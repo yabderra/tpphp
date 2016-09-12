@@ -43,11 +43,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="defines.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="defines.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/defines.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forfaits.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/forfaits.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -237,7 +247,7 @@
       <workItem from="1473169275656" duration="3171000" />
       <workItem from="1473681131160" duration="4189000" />
       <workItem from="1473685362043" duration="1988000" />
-      <workItem from="1473687573688" duration="883000" />
+      <workItem from="1473687573688" duration="899000" />
     </task>
     <task id="LOCAL-00001" summary="page acceuil">
       <created>1473689875267</created>
@@ -260,11 +270,18 @@
       <option name="project" value="LOCAL" />
       <updated>1473689914388</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="page catalog">
+      <created>1473689932701</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1473689932701</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11216000" />
+    <option name="totallyTimeSpent" value="11232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1608" height="864" extended-state="6" />
@@ -376,7 +393,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/page_top.php" />
     <entry file="file://$PROJECT_DIR$/catalogue.php" />
-    <entry file="file://$PROJECT_DIR$/forfaits.php" />
     <entry file="file://$PROJECT_DIR$/contact.php" />
     <entry file="file://$PROJECT_DIR$/views/menu.php" />
     <entry file="file://$PROJECT_DIR$/reservation.php" />
@@ -400,6 +416,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forfaits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
