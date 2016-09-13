@@ -1,5 +1,6 @@
 <?php
-require_once('views/page_top.php');// Inclusion des defines
+require_once('views/page_top.php');
+include_once (dirname(__FILE__) . '/forfaits.php');
 
     //var_dump($_POST);
     // Initialiser des variables de données de formulaire
@@ -39,11 +40,33 @@ require_once('views/page_top.php');// Inclusion des defines
     $feedback_cnx = "Les champs ne correspondent pas.";
     }
 
+    $forfaits_data =get_forfaits();
+if (array_key_exists('forfait_id',$_GET)){
+    $id = $_GET['forfait_id'];
+    $forfait_id = $_GET['forfait_id' ];
+}
+
+require_once('views/page_top.php');
 ?>
 
 <?php
+$forfait= $forfaits_data[$forfait_id]  ;
+echo  '<div>',
+$forfait[ FORF_NOM] ;
+'</div>';
 
-echo'<main>
+echo '<div>',
+$forfait[ FORF_CATEGORY];
+'</div>';
+echo '<div>',
+$forfait[ FORF_MAX_ANIMAUX];
+'</div>';
+?>
+    <div>
+        <img class="img-rounded" src="<?= IMG_PATH . $forfait['photo1'] ?>" alt=""/>
+    </div>
+
+<main>
         <h1><br>Accueil</br></h1>
     </main>
     <div id="wrapper">
@@ -51,7 +74,7 @@ echo'<main>
         <div id="logo">
             <img src="images/logo.jpg" alt="logo agence voyage">
         </div>
-      
+
 
     </div>
 
@@ -95,8 +118,8 @@ echo'<main>
             </div>
             <div>
                 <label class="labels" for="sports">Forfait choisi :</label>
+            
              
-                
             </div>
             <div>
                 <label class="labels" for="commentaire">Commentaire:</label>
@@ -113,5 +136,6 @@ echo'<main>
 
     
 </div>';
-require_once('views/page_bottom.php');// Inclusion des defines
-?>
+
+<?php
+        require_once('views/page_bottom.php');
