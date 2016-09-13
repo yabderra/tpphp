@@ -1,18 +1,52 @@
 <?php
 require_once('views/page_top.php');// Inclusion des defines
+
+    //var_dump($_POST);
+    // Initialiser des variables de données de formulaire
+    $nom = '';
+    $nom_ok = false;
+
+    $email = '';
+    $email_ok = false;
+
+    $feedback_cnx = ''; // Message de validation à retrouner à l'utilisateur en cas de données mauvaises
+
+    if (array_key_exists('nom', $_POST) && array_key_exists('password', $_POST)) {
+    // Filtrage du username
+    $nom = $_POST['username'];
+    $nom = filter_var($nom, FILTER_SANITIZE_MAGIC_QUOTES);
+    $nom = filter_var($nom, FILTER_SANITIZE_STRING);
+    // Username ne contient pas de caractères "spéciaux"
+    // Validation du username avec expression rationnelle
+    if (1 === preg_match('/^[a-z]{6,}$/', $nom)){
+    $nom_ok = true;
+    };
+
+    // Filtrage du password
+    $email = $_POST['email'];
+    $email = filter_var($email, FILTER_SANITIZE_MAGIC_QUOTES);
+    $email = filter_var($email, FILTER_SANITIZE_STRING);
+    // Validation du password avec expression rationnelle
+    $email_ok = (1 === preg_match('/^[A-Za-z0-9%&$!*?]{8,}$/', $email));
+    /*    if (1 === preg_match('/^[A-Za-z0-9%&$!*?]{8,}$/', $password)){
+    $password_ok = true;
+    };*/
+    }
+    if ($nom_ok && $email_ok) {
+    header('Location: page_suivante.php');
+    exit;
+    } else {
+    $feedback_cnx = "Les champs ne correspondent pas.";
+    }
+
 ?>
-    <main>
 
-
-
-
-
-
-        <h1><br>Accueil</br></h1>
-    </main>
 <?php
 
-echo'<div id="wrapper">
+echo'<main>
+        <h1><br>Accueil</br></h1>
+    </main>
+    <div id="wrapper">
     <div id="header">
         <div id="logo">
             <img src="images/logo.jpg" alt="logo agence voyage">
