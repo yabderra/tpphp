@@ -19,20 +19,19 @@ require_once('views/page_top.php');
             ?>
 
             <div class="col-sm-4" xmlns="http://www.w3.org/1999/html">
-                <a class="forfait">
+                <a class="forfait" href="reservation.php?forfait_id=<?=$id?>">
                     <h2><?= $forfait[FORF_NOM] ?></h2>
 
                     <img class="img-rounded" src="<?= IMG_PATH . $forfait[FORF_PHOTO1] ?>" alt=""/>
-                    <p><a href="reservation.php?forfait_id=<?=$id?>"><?= $forfait[FORF_DESCRIPTION] ?></a></p>
 
-$x= <img class="img-rounded" src="<?= IMG_PATH . $forfait[FORF_PHOTO1] ?>" alt=""/> ;
+
 
                 </a>
             </div>
 
             <?php
         } // if
-    }; // foreach
+    } // foreach
     ?>
 
 

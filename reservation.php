@@ -1,49 +1,66 @@
 <?php
-require_once('views/page_top.php');
 include_once (dirname(__FILE__) . '/forfaits.php');
-
+var_dump($_POST);
     //var_dump($_POST);
     // Initialiser des variables de données de formulaire
-    $nom = '';
-    $nom_ok = false;
 
-    $email = '';
-    $email_ok = false;
+/**
+ * Fomulaire à valider
+ */
+//var_dump($_POST);
 
-    $feedback_cnx = ''; // Message de validation à retrouner à l'utilisateur en cas de données mauvaises
+define ('AGE_MIN', 18);
+define ('AGE_MAX', 70);
+$nom = '';
+$nom_ok = false;
+$prenom = '';
+$prenom_ok = false;
+// Par défaut, je mets tous les champs à NON VALIDE jusqu'à vérification du contraire
 
-    if (array_key_exists('nom', $_POST) && array_key_exists('password', $_POST)) {
+
+// Champ lastname
+if (array_key_exists('nom', $_POST)) {
     // Filtrage du username
-    $nom = $_POST['username'];
+    $nom = $_POST['nom'];
     $nom = filter_var($nom, FILTER_SANITIZE_MAGIC_QUOTES);
     $nom = filter_var($nom, FILTER_SANITIZE_STRING);
     // Username ne contient pas de caractères "spéciaux"
     // Validation du username avec expression rationnelle
-    if (1 === preg_match('/^[a-z]{6,}$/', $nom)){
-    $nom_ok = true;
-    };
+    if (1 === preg_match('/^[a-z0-9]{4,}$/', $nom)){
+        $nom_ok = true;
+    };}
 
-    // Filtrage du password
-    $email = $_POST['email'];
-    $email = filter_var($email, FILTER_SANITIZE_MAGIC_QUOTES);
-    $email = filter_var($email, FILTER_SANITIZE_STRING);
-    // Validation du password avec expression rationnelle
-    $email_ok = (1 === preg_match('/^[A-Za-z0-9%&$!*?]{8,}$/', $email));
-    /*    if (1 === preg_match('/^[A-Za-z0-9%&$!*?]{8,}$/', $password)){
-    $password_ok = true;
-    };*/
-    }
-    if ($nom_ok && $email_ok) {
-    header('Location: page_suivante.php');
-    exit;
-    } else {
-    $feedback_cnx = "Les champs ne correspondent pas.";
-    }
+    if (array_key_exists('prenom', $_POST)) {
+        // Filtrage du username
+        $prenom = $_POST['prenom'];
+        $prenom = filter_var($prenom, FILTER_SANITIZE_MAGIC_QUOTES);
+        $prenom = filter_var($prenom, FILTER_SANITIZE_STRING);
+        // Username ne contient pas de caractères "spéciaux"
+        // Validation du username avec expression rationnelle
+        if (1 === preg_match('/^[a-z0-9]{4,}$/', $prenom)){
+            $prenom_ok = true;
+        };
+        if ($nom_ok && $prenom_ok) {
+            header('Location: catalog.php');
+            exit;
+        } else {
+            $feedback_cnx = "Le nom et le prenom ne correspondent pas.";
+            echo $feedback_cnx;
+        };}
 
+session_start();
+function afficheform(){
+    if(isset($_SESSION['nom'])) $nom = $_SESSION['nom'];
+else $nom = '';
+    if(isset($_SESSION['prenom'])) $prenom = $_SESSION['prenom'];
+    else $prenom = '';
+}
     $forfaits_data =get_forfaits();
 if (array_key_exists('forfait_id',$_GET)){
     $id = $_GET['forfait_id'];
     $forfait_id = $_GET['forfait_id' ];
+}else  {
+    header('Location: catalog.php');
 }
 
 require_once('views/page_top.php');
@@ -51,6 +68,7 @@ require_once('views/page_top.php');
 
 <?php
 $forfait= $forfaits_data[$forfait_id]  ;
+if ($forfait)
 echo  '<div>',
 $forfait[ FORF_NOM] ;
 '</div>';
@@ -80,19 +98,29 @@ $forfait[ FORF_MAX_ANIMAUX];
 
     <div id="contenu">
 <br><br><br><br>
-        <form method="post " action="#" name="myform" id="myform" onsubmit="validation()">
+        <form method="post"  name="myform" id="myform" >
 
             <div>
                 <label class="labels" for="nom">Nom: </label>
-                <input class="inputs" name="nom" id="nom" type="text"/>
+                <input class="inputs" name="nom" id="nom" type="text"/><?php $nom ?>
+
+
+            </div>
+            <div>
+                <label class="labels" for="prenom">Courriel:</label>
+                <input class="inputs" name="prenom" id="prenom" type="text"/><?php $prenom ?>
+
+
             </div>
             <div>
                 <label class="labels" for="email">Courriel:</label>
-                <input class="inputs" name="email" id="email" type="text"/>
+                <input class="inputs" name="email" id="email" type="text"/><?php $email ?>
+
+
             </div>
             <div>
-                <label class="labels" for="website">Site web:</label>
-                <input class="inputs" name="website" id="website" type="text"/>
+                <label class="labels" for="age">age:</label>
+                <input class="inputs" name="age" id="age" type="text"/><?php $age ?>
             </div>
             <div>
                 <label class="labels" for="date_commande">Date commande:</label>
